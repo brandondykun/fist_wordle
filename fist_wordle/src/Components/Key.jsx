@@ -1,17 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Key = ({
-  letter,
-  guessedLetters,
-  word,
-  currentGuess,
-  correctLetters,
-  setCorrectLetters,
-  wrongPlaceLetters,
-  setWrongPlaceLetters,
-  notInWordLetters,
-  setNotInWordLetters,
-}) => {
+const Key = ({ letter, guessedLetters, word, currentGuess }) => {
   const [derivedClassName, setDerivedClassName] = useState("");
 
   useEffect(() => {
