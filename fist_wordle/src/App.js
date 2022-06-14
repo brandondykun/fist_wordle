@@ -5,7 +5,7 @@ import Keyboard from "./Components/Keyboard";
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState(["S", "N", "A", "K", "E"]);
+  const [word, setWord] = useState(["A", "N", "G", "L", "E"]);
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guessNumber, setGuessNumber] = useState(1);
