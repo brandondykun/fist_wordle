@@ -1,5 +1,7 @@
 :root {
-  --grey: rgb(64, 64, 64)
+  --grey: rgb(64, 64, 64);
+  --yellow: rgb(181, 159, 59);
+  --green: rgb(83, 141, 78);
 }
 
 
@@ -31,9 +33,13 @@
   background-color: black;
   color: white;
   color: transparent;
- text-shadow: 0 0 0 #ffffff;
- transition: background-color 1s ease;
- font-size: 1.9rem;
+  text-shadow: 0 0 0 #ffffff;
+  transition: background-color 1s ease;
+  font-size: 1.9rem;
+}
+
+input:disabled {
+  border: 2px solid var(--grey);
 }
 
 .submit-button {
@@ -56,11 +62,11 @@
 }
 
 .correct {
-  background-color: green;
+  background-color: var(--green);
 }
 
 .in-word {
-  background-color: rgb(143, 143, 61);
+  background-color: var(--yellow);
 }
 
 .keyboard {
@@ -90,11 +96,11 @@
 }
 
 .green-key {
-  background-color: green;
+  background-color: var(--green);
 }
 
 .yellow-key {
-  background-color: rgb(143, 143, 61);
+  background-color: var(--yellow);
 }
 
 .main-content {
