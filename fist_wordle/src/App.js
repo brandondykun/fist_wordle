@@ -1,11 +1,15 @@
 import Word from "./Components/Word";
 import { useState } from "react";
 import Keyboard from "./Components/Keyboard";
+import Message from "./Components/Message";
 
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState(["A", "N", "G", "L", "E"]);
+  const [word, setWord] = useState(["B", "L", "I", "N", "D"]);
+  const [message, setMessage] = useState(
+    "Brevity Term: No visual contact with FRIENDLY aircraft/ground position. Opposite of visual."
+  );
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guessNumber, setGuessNumber] = useState(1);
@@ -15,6 +19,7 @@ function App() {
   const [guessFour, setGuessFour] = useState([]);
   const [guessFive, setGuessFive] = useState([]);
   const [guessSix, setGuessSix] = useState([]);
+  const [solved, setSolved] = useState(false);
 
   const onSubmit = () => {
     let currentWordGuess = 1;
@@ -41,6 +46,16 @@ function App() {
       const updatedGuessedLetters = [...guessedLetters, ...currentWordGuess];
       setGuessedLetters(updatedGuessedLetters);
       setGuessNumber(guessNumber + 1);
+    }
+
+    let numberCorrect = 0;
+    for (let i = 0; i < currentWordGuess.length; i++) {
+      if (currentWordGuess[i] == word[i]) {
+        numberCorrect += 1;
+      }
+    }
+    if (numberCorrect === 5) {
+      setSolved(true);
     }
   };
 
@@ -93,11 +108,15 @@ function App() {
         <button className="submit-button" onClick={onSubmit}>
           SUBMIT
         </button>
-        <Keyboard
-          guessedLetters={guessedLetters}
-          word={word}
-          currentGuess={currentGuess}
-        />
+
+        {solved && <Message message={message} />}
+        {!solved && (
+          <Keyboard
+            guessedLetters={guessedLetters}
+            word={word}
+            currentGuess={currentGuess}
+          />
+        )}
       </main>
     </div>
   );
