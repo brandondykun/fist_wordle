@@ -1,5 +1,4 @@
 import Letter from "./Letter";
-import { useState } from "react";
 
 const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
   return (
