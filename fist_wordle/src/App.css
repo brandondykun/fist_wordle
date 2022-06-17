@@ -38,10 +38,6 @@
   font-size: 1.9rem;
 }
 
-input:disabled {
-  border: 2px solid var(--grey);
-}
-
 .submit-button {
   padding: 1rem;
   width: 200px;
@@ -107,6 +103,12 @@ input:disabled {
   padding-top: 2rem;
 }
 
+.message-container {
+  color: red;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
 @media only screen and (min-width: 600px) {
   .letter-input {
     height: 60px;
@@ -118,5 +120,11 @@ input:disabled {
     font-size: 1rem;
     height: 40px;
     width: 40px;
+  }
+
+  .message-container {
+    font-size: 1.4rem;
+    max-width: 70vw;
+    margin: auto;
   }
 }
