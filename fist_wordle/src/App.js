@@ -6,9 +6,9 @@ import Message from "./Components/Message";
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState(["B", "L", "I", "N", "D"]);
+  const [word, setWord] = useState(["J", "O", "K", "E", "R"]);
   const [message, setMessage] = useState(
-    "Brevity Term: No visual contact with FRIENDLY aircraft/ground position. Opposite of visual."
+    "Brevity Term: Fuel state above BINGO at which separation or BUGOUT or event termination should begin."
   );
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [currentGuess, setCurrentGuess] = useState([]);
