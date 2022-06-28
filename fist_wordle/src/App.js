@@ -20,6 +20,8 @@ function App() {
   const [guessFive, setGuessFive] = useState([]);
   const [guessSix, setGuessSix] = useState([]);
   const [solved, setSolved] = useState(false);
+  const [currentRow, setCurrentRow] = useState(1);
+  const [currentColumn, setCurrentColumn] = useState(1);
 
   const onSubmit = () => {
     let currentWordGuess = 1;
@@ -46,6 +48,10 @@ function App() {
       const updatedGuessedLetters = [...guessedLetters, ...currentWordGuess];
       setGuessedLetters(updatedGuessedLetters);
       setGuessNumber(guessNumber + 1);
+      if (currentRow < 6) {
+        setCurrentRow(currentRow + 1);
+      }
+      setCurrentColumn(1);
     }
 
     let numberCorrect = 0;
@@ -69,6 +75,9 @@ function App() {
           wordtoGuess={word}
           guessNumber={guessNumber}
           wordNumber={1}
+          currentRow={currentRow}
+          currentColumn={currentColumn}
+          setCurrentColumn={setCurrentColumn}
         />
         <Word
           guess={guessTwo}
@@ -76,6 +85,9 @@ function App() {
           wordtoGuess={word}
           guessNumber={guessNumber}
           wordNumber={2}
+          currentRow={currentRow}
+          currentColumn={currentColumn}
+          setCurrentColumn={setCurrentColumn}
         />
         <Word
           guess={guessThree}
@@ -83,6 +95,9 @@ function App() {
           wordtoGuess={word}
           guessNumber={guessNumber}
           wordNumber={3}
+          currentRow={currentRow}
+          currentColumn={currentColumn}
+          setCurrentColumn={setCurrentColumn}
         />
         <Word
           guess={guessFour}
@@ -90,6 +105,9 @@ function App() {
           wordtoGuess={word}
           guessNumber={guessNumber}
           wordNumber={4}
+          currentRow={currentRow}
+          currentColumn={currentColumn}
+          setCurrentColumn={setCurrentColumn}
         />
         <Word
           guess={guessFive}
@@ -97,6 +115,9 @@ function App() {
           wordtoGuess={word}
           guessNumber={guessNumber}
           wordNumber={5}
+          currentRow={currentRow}
+          currentColumn={currentColumn}
+          setCurrentColumn={setCurrentColumn}
         />
         <Word
           guess={guessSix}
@@ -104,6 +125,9 @@ function App() {
           wordtoGuess={word}
           guessNumber={guessNumber}
           wordNumber={6}
+          currentRow={currentRow}
+          currentColumn={currentColumn}
+          setCurrentColumn={setCurrentColumn}
         />
         <button className="submit-button" onClick={onSubmit}>
           SUBMIT
