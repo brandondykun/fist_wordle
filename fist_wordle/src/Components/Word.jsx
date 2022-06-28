@@ -1,6 +1,15 @@
 import Letter from "./Letter";
 
-const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
+const Word = ({
+  guess,
+  setGuess,
+  wordtoGuess,
+  guessNumber,
+  wordNumber,
+  currentRow,
+  currentColumn,
+  setCurrentColumn,
+}) => {
   return (
     <div>
       <Letter
@@ -10,6 +19,9 @@ const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
         wordtoGuess={wordtoGuess}
         guessNumber={guessNumber}
         wordNumber={wordNumber}
+        currentRow={currentRow}
+        currentColumn={currentColumn}
+        setCurrentColumn={setCurrentColumn}
       />
       <Letter
         setWord={setGuess}
@@ -18,6 +30,9 @@ const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
         wordtoGuess={wordtoGuess}
         guessNumber={guessNumber}
         wordNumber={wordNumber}
+        currentRow={currentRow}
+        currentColumn={currentColumn}
+        setCurrentColumn={setCurrentColumn}
       />
       <Letter
         setWord={setGuess}
@@ -26,6 +41,9 @@ const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
         wordtoGuess={wordtoGuess}
         guessNumber={guessNumber}
         wordNumber={wordNumber}
+        currentRow={currentRow}
+        currentColumn={currentColumn}
+        setCurrentColumn={setCurrentColumn}
       />
       <Letter
         setWord={setGuess}
@@ -34,6 +52,9 @@ const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
         wordtoGuess={wordtoGuess}
         guessNumber={guessNumber}
         wordNumber={wordNumber}
+        currentRow={currentRow}
+        currentColumn={currentColumn}
+        setCurrentColumn={setCurrentColumn}
       />
       <Letter
         setWord={setGuess}
@@ -42,6 +63,9 @@ const Word = ({ guess, setGuess, wordtoGuess, guessNumber, wordNumber }) => {
         wordtoGuess={wordtoGuess}
         guessNumber={guessNumber}
         wordNumber={wordNumber}
+        currentRow={currentRow}
+        currentColumn={currentColumn}
+        setCurrentColumn={setCurrentColumn}
       />
     </div>
   );
