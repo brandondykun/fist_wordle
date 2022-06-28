@@ -37,6 +37,12 @@
   font-size: 1.9rem;
 }
 
+.letter-input:focus, .submit-button:focus {
+  outline: none;
+  border: 2px solid #da9e25;
+  box-shadow: 0 0 10px #da9e25;
+}
+
 .submit-button {
   padding: 1rem;
   width: 200px;
