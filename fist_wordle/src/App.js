@@ -2,14 +2,13 @@ import Word from "./Components/Word";
 import { useState } from "react";
 import Keyboard from "./Components/Keyboard";
 import Message from "./Components/Message";
+import { answer } from "./word";
 
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState(["J", "O", "K", "E", "R"]);
-  const [message, setMessage] = useState(
-    "Brevity Term: Fuel state above BINGO at which separation or BUGOUT or event termination should begin."
-  );
+  const word = answer.word;
+  const message = answer.message;
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [guessNumber, setGuessNumber] = useState(1);
