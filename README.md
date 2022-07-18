@@ -3,6 +3,8 @@
 ![alt text](./fist_wordle/public/favicon.ico)
 
 FIST Wordle is a side project that was built for my fellow military team members. The game uses only military specific words, and when a word is guessed correctly, the technical definition is displayed. It was designed to be simple, fun and educational.
+
+See it in action here: https://brandondykun.github.io/fist_wordle/
 <br>
 <br>
 
