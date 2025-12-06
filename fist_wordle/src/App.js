@@ -55,7 +55,7 @@ function App() {
 
     let numberCorrect = 0;
     for (let i = 0; i < currentWordGuess.length; i++) {
-      if (currentWordGuess[i] == word[i]) {
+      if (currentWordGuess[i] === word[i]) {
         numberCorrect += 1;
       }
     }
